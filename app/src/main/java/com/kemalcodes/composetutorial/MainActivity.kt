@@ -1,16 +1,26 @@
 package com.kemalcodes.composetutorial
 
+// Tutorial #8: Navigation — Moving Between Screens
+// https://kemalcodes.com/posts/jetpack-compose-tutorial-navigation/
+//
+// This tutorial demonstrates:
+// - Type-safe navigation with @Serializable routes
+// - Bottom navigation bar with NavigationBar + NavigationBarItem
+// - Nested navigation (list → detail inside a tab)
+// - Passing arguments between screens
+// - Back stack management (popUpTo, launchSingleTop, restoreState)
+//
+// File structure:
+// - Routes.kt — all route definitions (@Serializable)
+// - Screens.kt — screen Composables (don't know about NavController)
+// - AppNavigation.kt — NavHost + bottom bar + navigation logic
+// - MainActivity.kt — entry point (this file)
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.kemalcodes.composetutorial.navigation.AppNavigation
 import com.kemalcodes.composetutorial.ui.theme.AndroidjetpackcomposetutorialTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +29,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             AndroidjetpackcomposetutorialTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                // All navigation is handled inside AppNavigation
+                AppNavigation()
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AndroidjetpackcomposetutorialTheme {
-        Greeting("Android")
     }
 }
