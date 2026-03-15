@@ -15,19 +15,41 @@ android {
         applicationId = "com.kemalcodes.composetutorial"
         minSdk = 24
         targetSdk = 36
+
+        // Version info for the Play Store
+        // Increment versionCode for every release (Play Store requires it to increase)
         versionCode = 1
-        versionName = "1.0"
+        // Human-readable version shown to users (e.g., "1.0.0", "1.1.0")
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    // Signing config for release builds
+    // Uncomment and fill in with your keystore details before publishing.
+    // Never commit your actual keystore passwords to version control!
+    //
+    // signingConfigs {
+    //     create("release") {
+    //         storeFile = file("path/to/your/keystore.jks")
+    //         storePassword = System.getenv("KEYSTORE_PASSWORD") ?: ""
+    //         keyAlias = System.getenv("KEY_ALIAS") ?: ""
+    //         keyPassword = System.getenv("KEY_PASSWORD") ?: ""
+    //     }
+    // }
+
     buildTypes {
         release {
-            isMinifyEnabled = false
+            // Enable minification for smaller APK and code obfuscation
+            isMinifyEnabled = true
+            // Enable resource shrinking to remove unused resources
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            // Uncomment to use your signing config for release builds
+            // signingConfig = signingConfigs.getByName("release")
         }
     }
     compileOptions {

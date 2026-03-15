@@ -1,21 +1,30 @@
-# Add project specific ProGuard rules here.
-# You can control the set of applied configuration files using the
-# proguardFiles setting in build.gradle.
+# ProGuard rules for the Task Manager app
 #
-# For more details, see
-#   http://developer.android.com/guide/developing/tools/proguard.html
+# These rules tell R8 (the code shrinker) what to keep when building
+# a release APK. Without them, R8 might remove or rename code that
+# is accessed via reflection.
 
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# ---- Compose ----
+# Keep Compose runtime classes needed for reflection
+-keep class androidx.compose.** { *; }
 
-# Uncomment this to preserve the line number information for
-# debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+# Don't warn about Compose internal APIs
+-dontwarn androidx.compose.**
 
-# If you keep the line number information, uncomment this to
-# hide the original source file name.
-#-renamesourcefileattribute SourceFile
+# ---- General Android ----
+# Keep line numbers for better crash reports in production
+-keepattributes SourceFile,LineNumberTable
+
+# Hide the original source file name in stack traces
+-renamesourcefileattribute SourceFile
+
+# Keep the Application class
+-keep class com.kemalcodes.composetutorial.** { *; }
+
+# ---- Kotlin ----
+# Keep Kotlin metadata for reflection
+-keepattributes *Annotation*
+-keepattributes KotlinMetadata
+
+# Don't warn about missing Kotlin reflect classes if not used
+-dontwarn kotlin.reflect.**
