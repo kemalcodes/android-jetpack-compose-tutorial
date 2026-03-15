@@ -1,5 +1,9 @@
 package com.kemalcodes.composetutorial
 
+// Tutorial #13: Room Database — Saving Data Locally
+// https://kemalcodes.com/posts/jetpack-compose-tutorial-room/
+// Note: This branch uses AGP 8.10 + Kotlin 2.1.21 + KSP for Room compatibility
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -7,10 +11,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import com.kemalcodes.composetutorial.notes.NotesScreen
 import com.kemalcodes.composetutorial.ui.theme.AndroidjetpackcomposetutorialTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,28 +22,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             AndroidjetpackcomposetutorialTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    NotesScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AndroidjetpackcomposetutorialTheme {
-        Greeting("Android")
     }
 }
