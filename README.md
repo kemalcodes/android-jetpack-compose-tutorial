@@ -28,28 +28,28 @@ The `main` branch contains the base project. Tutorial branches build on top of i
 | 2 | Layouts — Column, Row, Box | `tutorial-02-layouts` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-layouts/) |
 | 3 | Modifiers | `tutorial-03-modifiers` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-modifiers/) |
 | 4 | Text, Button, Image, TextField | `tutorial-04-components` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-components/) |
-| 5 | State | `tutorial-05-state` | Coming soon |
-| 6 | Lists — LazyColumn, LazyRow | `tutorial-06-lists` | Coming soon |
-| 7 | Material 3 Theming | `tutorial-07-theming` | Coming soon |
+| 5 | State | `tutorial-05-state` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-state/) |
+| 6 | Lists — LazyColumn, LazyRow | `tutorial-06-lists` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-lists/) |
+| 7 | Material 3 Theming | `tutorial-07-theming` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-theming/) |
 
 ### Part 2: Intermediate
 
 | # | Tutorial | Branch | Article |
 |---|---------|--------|---------|
-| 8 | Navigation | `tutorial-08-navigation` | Coming soon |
-| 9 | ViewModel | `tutorial-09-viewmodel` | Coming soon |
+| 8 | Navigation | `tutorial-08-navigation` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-navigation/) |
+| 9 | ViewModel | `tutorial-09-viewmodel` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-viewmodel/) |
 | 10 | MVI Pattern | `tutorial-10-mvi` | [Read](https://kemalcodes.com/posts/mvi-with-jetpack-compose/) |
-| 11 | Side Effects | `tutorial-11-side-effects` | Coming soon |
-| 12 | Retrofit — API Calls | `tutorial-12-retrofit` | Coming soon |
-| 13 | Room Database | `tutorial-13-room` | Coming soon |
-| 14 | Hilt — Dependency Injection | `tutorial-14-hilt` | Coming soon |
+| 11 | Side Effects | `tutorial-11-side-effects` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-side-effects/) |
+| 12 | Retrofit — API Calls | `tutorial-12-retrofit` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-retrofit/) |
+| 13 | Room Database | `tutorial-13-room` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-room/) |
+| 14 | Hilt — Dependency Injection | `tutorial-14-hilt` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-hilt/) |
 
 ### Part 3: Advanced
 
 | # | Tutorial | Branch | Article |
 |---|---------|--------|---------|
-| 15 | Animations | `tutorial-15-animations` | Coming soon |
-| 16 | Custom Layouts & Canvas | `tutorial-16-canvas` | Coming soon |
+| 15 | Animations | `tutorial-15-animations` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-animations/) |
+| 16 | Custom Layouts & Canvas | `tutorial-16-canvas` | [Read](https://kemalcodes.com/posts/jetpack-compose-tutorial-canvas/) |
 | 17 | Performance | `tutorial-17-performance` | Coming soon |
 | 18 | Testing | `tutorial-18-testing` | Coming soon |
 | 19 | Permissions & Camera | `tutorial-19-permissions` | Coming soon |
@@ -64,6 +64,11 @@ The `main` branch contains the base project. Tutorial branches build on top of i
 | 23 | UI Layer | `tutorial-23-ui-layer` | Coming soon |
 | 24 | Polish & Animations | `tutorial-24-polish` | Coming soon |
 | 25 | Publish to Google Play | `tutorial-25-publish` | Coming soon |
+
+## Branch Notes
+
+- **Tutorials 1-12, 15:** Use AGP 9.1 + Kotlin 2.2.10 (main branch versions)
+- **Tutorials 13 (Room), 14 (Hilt):** Use AGP 8.10 + Kotlin 2.1.21 + KSP (required for annotation processing compatibility)
 
 ## Tech Stack
 
